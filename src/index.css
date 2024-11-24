@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-black;
+}
+
+@layer utilities {
+  .neon-aqua {
+    --aqua-color: rgb(68, 255, 247);
+    color: var(--aqua-color);
+    text-shadow: 
+      0 0 7px var(--aqua-color),
+      0 0 10px var(--aqua-color),
+      0 0 21px var(--aqua-color),
+      0 0 42px var(--aqua-color),
+      0 0 82px var(--aqua-color),
+      0 0 92px var(--aqua-color),
+      0 0 102px var(--aqua-color),
+      0 0 151px var(--aqua-color);
+  }
+  
+  .neon-coral {
+    --coral-color: rgb(255, 89, 94);
+    color: var(--coral-color);
+    text-shadow: 0 0 10px var(--coral-color);
+  }
+  
+  .gradient-neon {
+    background: linear-gradient(135deg, 
+      rgba(68, 255, 247, 0.15),
+      rgba(255, 89, 94, 0.15)
+    );
+  }
+}
+
+@keyframes spark {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.animate-spark {
+  animation: spark 0.5s ease-in-out infinite;
+}
